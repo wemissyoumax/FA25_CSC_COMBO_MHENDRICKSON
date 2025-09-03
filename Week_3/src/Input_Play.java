@@ -28,7 +28,7 @@ public class Input_Play {
 		System.out.println("Enter kilos:");
 		double kilos = input.nextDouble();
 		double pounds = convertToPounds(kilos);
-		System.out.printf("%.2f",pounds,);
+		System.out.printf("%.2f",pounds);
 	}
  private static double convertToPounds (double kilos) {
 	 return kilos * 2.2;
