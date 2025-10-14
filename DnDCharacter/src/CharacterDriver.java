@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
 public class CharacterDriver {
+	
 
 	public static void main(String[] args) {
+		CharacterRoller me = new CharacterRoller();
+		System.out.println(me);
+		
 		Scanner input = new Scanner(System.in);
 		System.out.println("What is your character's name?");
 		String name = input.next();
@@ -31,7 +35,7 @@ public class CharacterDriver {
 		System.out.println(bob.toString());
 		System.out.println(monster.toString());
 		
-		Character harpy = new Character(100, "Harpy", 75, 25, "Talons", 35)
+		Character harpy = new Character(100, "Harpy", 75, 25, "Talons", 35);
 
 	}
 
