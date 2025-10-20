@@ -42,10 +42,10 @@ public class CharacterRoller {
 		return mod;
 	}
 	private String recType() {
-		int high = stats[0];
+		int high = 0;
 		String ret = "";
 		for(int i = 0; i < stats.length; i ++) {
-			if(stats[i] > high) high = i;
+			if(stats[i] > stats[high]) high = i;
 		}
 		switch(high) {
 			case 0:
@@ -55,7 +55,7 @@ public class CharacterRoller {
 				ret = "Rogue";
 				break;
 			case 2:
-				ret = "Barbarian";
+				ret = "Paladin";
 				break;
 			case 3:
 				ret = "Wizard";
@@ -74,7 +74,7 @@ public class CharacterRoller {
 	public String toString() {
 		return "Character Stats [str=" + str + ", Mod [" + findMod(str) + "], dex=" + dex + ", Mod [" + findMod(dex) + 
 				"], con=" + con +", Mod [" + findMod(con) +  "], intl=" + intl + ", wis=" + wis
-				+ ", cha=" + cha + "]" + recType();
+				+ ", cha=" + cha + "]" + "\nReccomended type = " + recType();
 	}
 
 	
