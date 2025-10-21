@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Random;
 
 public class Deck {
@@ -14,6 +15,34 @@ public class Deck {
 			for(int rank = 1; rank <= 13; rank ++) {
 				cards[index] = new Card(rank, suit);
 				index++;
+			}
+		}
+	}
+	
+	public void selectionSort() {
+		for (int i = 0; i < cards.length -1; i++) {
+			int bigIndex = 0;
+			for (int j =1; j < cards.length - i; j++)
+				if (cards[j].compareTo(cards[bigIndex]) > 0)
+					bigIndex =j;
+			swap(bigIndex, cards.length -i-1);
+		}
+	}
+	
+	public void insertionSort() {
+		for (int i = 1; i < cards.length; i++) {
+			for (int j = i; (j > 0) && (cards[j].compareTo(cards[j -1]) < 0); j--) {
+				swap(j, j-1);
+			}
+		}
+	}
+	
+	public void bubbleSort() {
+		for (int i = 0; i < cards.length; i++) {
+			for (int j = 1; j < cards.length - i; j++) {
+				if(cards[j-1].compareTo(cards[j]) > 0){
+					swap(j-1, j);
+				}
 			}
 		}
 	}
@@ -47,8 +76,8 @@ public class Deck {
 	public void printCards() {
 		int n = 0;
 		for(Card card : cards) {
-			System.out.print(card + ", ");
 			if(n % 13 == 0 && n != 0) System.out.println();
+			System.out.print(card + ", ");
 			n++;
 		}
 		
