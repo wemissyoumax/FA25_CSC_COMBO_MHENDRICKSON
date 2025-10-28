@@ -29,8 +29,18 @@ public class Deck {
 		}
 	}
 	
+	public Deck subDeck(int low, int high) {
+		Deck sub = new Deck (high - low + 1);
+		for (int i = 0; i < sub.cards.length; i++) {
+			sub.cards[i] = this.cards[low + i];
+		}
+		return sub;
+	}
+	
+
+	
 	public void insertionSort() {
-		for (int i = 1; i < cards.length; i++) {
+		for (int i = 1; i < this.cards.length; i++) {
 			for (int j = i; (j > 0) && (cards[j].compareTo(cards[j -1]) < 0); j--) {
 				swap(j, j-1);
 			}
@@ -82,7 +92,6 @@ public class Deck {
 		}
 		
 	}
-	
-	
-	
 }
+	
+
