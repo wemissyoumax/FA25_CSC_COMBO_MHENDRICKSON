@@ -1,4 +1,6 @@
 // default constructor
+package Code;
+
 public class Character {
 	private int health;
 	private String name;

@@ -1,3 +1,4 @@
+package Code;
 
 public class CharacterRoller {
 	// Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma

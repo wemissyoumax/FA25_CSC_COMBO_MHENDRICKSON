@@ -1,3 +1,4 @@
+package Code;
 
 public class Weapon {
 	private int damage;

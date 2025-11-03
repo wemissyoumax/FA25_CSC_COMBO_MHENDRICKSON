@@ -8,7 +8,7 @@ public class War_Driver {
 		p1.addDeck(deck.subDeck(0, 25));
 		Pile center = null;
 		Pile p2 = new Pile();
-		p1.addDeck(deck.subDeck(26, 51));
+		p1.addDeck(deck.subDeck(26 , 51));
 		int diff = -1;
 		while(!p1.isEmpty() && !p2.isEmpty()) {
 			if(diff != 0) {
