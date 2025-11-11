@@ -75,7 +75,7 @@ public class Character {
 	// Override the toString in this one's parent
 	@Override
 	public String toString() {
-		return "Character [Health = " + health + ", Name = " + name + ", Power = " + power + ", Armor = " + armor + "Weapon = " + weapon]";
+		return "Character [Health = " + health + ", Name = " + name + ", Power = " + power + ", Armor = " + armor + "Weapon = " + weapon]";"
 	}
 	
 	
